@@ -3,6 +3,8 @@ import rosbag
 import subprocess, yaml
 import sys
 
+
+
 def getFramerateInfo(bag_path):
     info_dict = yaml.load(
         subprocess.Popen(['rosbag', 'info', '--yaml', bag_path], stdout=subprocess.PIPE).communicate()[0])
